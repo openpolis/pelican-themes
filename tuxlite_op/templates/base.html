@@ -69,9 +69,9 @@
             
                 <li {% block is_archives %}{% endblock %}><a href="{{ SITEURL }}/archives.html">Archives</a>
                 <li {% block is_tags %}{% endblock %}><a href="{{ SITEURL }}/tags.html">Tags</a>
-                <li><a href="{{ SITEURL }}/{{ FEED }}" rel="alternate">Atom feed</a></li>
-                {% if FEED_RSS %}
-                <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
+                <li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">Atom feed</a></li>
+                {% if FEED_ALL_RSS %}
+                <li><a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">RSS feed</a></li>
                 {% endif %}
             </ul>
             </div>
@@ -129,7 +129,7 @@
 
 <footer>
 <br />
-<p><a href="{{ SITEURL }}">{{ SITENAME }}</a> &copy; {{ AUTHOR }} 2012</p>
+<p id="copyright-notice"><a href="{{ SITEURL }}">{{ SITENAME }}</a> &copy; {{ AUTHOR }} {{ COPYRIGHT_YEAR }} - <span>all contents within lab.openpolis.it are released under the terms of the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported</a> license</span> </p>
 </footer>
 
 </div> <!-- /container -->
